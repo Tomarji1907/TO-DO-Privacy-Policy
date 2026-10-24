@@ -4,653 +4,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-  <meta name="description" content="Privacy Policy for To-Do Task Manager by Tomar ji app's. Learn how tasks, preferences, and privacy consent are stored.">
-  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#eaf4ff">
-
   <title>Privacy Policy | To-Do Task Manager</title>
 
   <style>
     :root {
-      --bg: #f1f7ff;
-      --surface: #ffffff;
-      --surface-soft: #f7faff;
-      --text: #1b2c45;
-      --muted: #6c7d94;
-      --primary: #2878d4;
-      --primary-dark: #175eb4;
-      --border: #dce8f6;
-      --shadow: 0 10px 30px rgba(42, 90, 145, 0.08);
-      --radius: 20px;
+      --blue: #2878d4;
+      --ink: #1b2c45;
+      --muted: #62758d;
+      --line: #dce8f6;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(
-        145deg,
-        #eaf5ff,
-        #ffffff 55%,
-        #d8eaff
-      );
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
-      overflow-wrap: anywhere;
+      background: linear-gradient(145deg, #eaf5ff, #fff 55%, #d8eaff);
+      color: var(--ink);
+      font: 16px/1.7 Arial, Helvetica, sans-serif;
     }
 
-    a {
-      color: var(--primary-dark);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    a:hover {
-      color: var(--primary);
-    }
-
-    .page {
-      width: 100%;
-      max-width: 850px;
+    main {
+      max-width: 760px;
       margin: 0 auto;
-      padding: 25px 17px 40px;
+      padding: 24px 17px calc(35px + env(safe-area-inset-bottom));
     }
 
-    /* BRAND */
-
-    .brand-header {
+    .brand {
       text-align: center;
-      padding: 8px 0 4px;
-    }
-
-    .ram-brand {
-      color: var(--primary-dark);
-      font-size: 25px;
+      color: var(--blue);
       font-weight: 900;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
-    }
-
-    .brand-mark {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      margin: 0 auto 9px;
-      border-radius: 15px;
-      background: linear-gradient(145deg, #2878d4, #175eb4);
-      color: #ffffff;
-      box-shadow: 0 7px 18px rgba(40, 120, 212, 0.22);
-      font-size: 20px;
-      font-weight: 900;
+      font-size: 24px;
       letter-spacing: 1px;
     }
 
-    .brand-name {
-      margin: 0;
-      color: var(--text);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .brand-subtitle {
-      margin: 3px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    /* MAIN POLICY CARD */
-
-    .policy-card {
-      margin-top: 23px;
-      padding: 32px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .policy-label {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 5px 11px;
-      border-radius: 30px;
-      background: #e7f2ff;
-      color: var(--primary-dark);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1px;
+    article {
+      margin-top: 20px;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(42, 90, 145, .08);
     }
 
     h1 {
-      margin: 0 0 8px;
-      color: var(--primary-dark);
-      font-size: clamp(29px, 5vw, 40px);
+      margin: 0 0 4px;
+      font-size: clamp(27px, 6vw, 36px);
       line-height: 1.2;
-      letter-spacing: -0.6px;
     }
 
-    .policy-subtitle {
-      margin: 0 0 8px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .policy-date {
-      margin: 0;
+    .updated {
+      margin-top: 0;
       color: var(--muted);
       font-size: 13px;
     }
 
-    .intro-box {
-      margin-top: 23px;
-      padding: 17px 18px;
-      background: linear-gradient(120deg, #e4f1ff, #f8fbff);
-      border: 1px solid #d4e8ff;
-      border-radius: 15px;
-    }
-
-    .intro-box p {
-      margin: 0;
-    }
-
-    .section-divider {
-      height: 1px;
-      margin: 25px 0;
-      background: var(--border);
-      border: 0;
-    }
-
     h2 {
-      margin: 28px 0 9px;
-      color: var(--primary-dark);
-      font-size: 20px;
-      line-height: 1.4;
+      margin: 25px 0 7px;
+      font-size: 19px;
     }
 
-    h2:first-child {
-      margin-top: 0;
+    p, li { color: #41546d; }
+
+    a { color: #175eb4; }
+
+    .back {
+      display: inline-block;
+      margin-top: 23px;
+      padding: 10px 15px;
+      border: 0;
+      border-radius: 12px;
+      background: var(--blue);
+      color: #fff;
+      text-decoration: none;
+      font: 700 15px Arial, Helvetica, sans-serif;
+      cursor: pointer;
     }
 
-    p {
-      margin: 9px 0;
-      color: #41546d;
-    }
-
-    ul {
-      margin: 10px 0;
-      padding-left: 23px;
-    }
-
-    li {
-      margin: 7px 0;
-      padding-left: 2px;
-      color: #41546d;
-    }
-
-    .info-box {
-      margin-top: 13px;
-      padding: 15px 17px;
-      background: var(--surface-soft);
-      border: 1px solid var(--border);
-      border-radius: 13px;
-    }
-
-    .info-box p {
-      margin: 5px 0;
-    }
-
-    .contact-card {
-      margin-top: 15px;
-      padding: 19px;
-      background: var(--surface-soft);
-      border: 1px solid var(--border);
-      border-radius: 15px;
-    }
-
-    .contact-card p {
-      margin: 8px 0;
-    }
-
-    .contact-title {
-      margin-top: 28px;
-    }
-
-    .back-link {
-      display: inline-flex;
+    .close-btn {
+      position: fixed;
+      z-index: 10;
+      top: calc(12px + env(safe-area-inset-top));
+      right: calc(12px + env(safe-area-inset-right));
+      width: 44px;
+      height: 44px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      margin-top: 27px;
-      padding: 12px 18px;
-      border-radius: 12px;
-      background: var(--primary);
-      color: #ffffff;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background 0.2s ease, transform 0.2s ease;
+      border: 1px solid #d5e5f7;
+      border-radius: 50%;
+      background: #fff;
+      color: #175eb4;
+      box-shadow: 0 5px 18px rgba(23, 94, 180, .16);
+      font: 700 27px/1 Arial, Helvetica, sans-serif;
+      cursor: pointer;
     }
 
-    .back-link:hover {
-      background: var(--primary-dark);
-      color: #ffffff;
-      transform: translateY(-1px);
+    .close-btn:focus-visible,
+    .back:focus-visible {
+      outline: 3px solid #82baff;
+      outline-offset: 3px;
     }
 
-    .footer {
-      padding: 23px 5px 0;
-      color: var(--muted);
-      text-align: center;
-      font-size: 12px;
-    }
-
-    .footer p {
-      margin: 4px 0;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* SMALL SCREENS */
-
-    @media (max-width: 600px) {
-      .page {
-        padding: 17px 12px 28px;
-      }
-
-      .ram-brand {
-        font-size: 23px;
-      }
-
-      .policy-card {
-        margin-top: 17px;
-        padding: 22px 17px;
-        border-radius: 17px;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-
-      h2 {
-        margin-top: 25px;
-        font-size: 18px;
-      }
-
-      .intro-box {
-        padding: 14px;
-      }
-
-      p,
-      li {
-        font-size: 15px;
-      }
-
-      .contact-card {
-        padding: 15px;
-      }
-
-      .back-link {
-        width: 100%;
-      }
-    }
-
-    /* OPTIONAL SYSTEM DARK MODE */
-
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: linear-gradient(
-          145deg,
-          #101b2a,
-          #18273a 55%,
-          #203248
-        );
-        color: #edf5ff;
-      }
-
-      .policy-card {
-        background: #18273a;
-        border-color: #344a62;
-      }
-
-      .brand-name {
-        color: #edf5ff;
-      }
-
-      .policy-subtitle,
-      .policy-date,
-      .brand-subtitle,
-      .footer,
-      .footer p {
-        color: #b1c1d5;
-      }
-
-      .intro-box {
-        background: #203248;
-        border-color: #344a62;
-      }
-
-      .intro-box p,
-      p,
-      li {
-        color: #d0deee;
-      }
-
-      h1,
-      h2 {
-        color: #78b8ff;
-      }
-
-      .ram-brand {
-        color: #78b8ff;
-      }
-
-      .info-box,
-      .contact-card {
-        background: #203248;
-        border-color: #344a62;
-      }
-
-      .section-divider {
-        background: #344a62;
-      }
-
-      a {
-        color: #8bc3ff;
-      }
-
-      .policy-label {
-        background: #203b59;
-        color: #a8d2ff;
-      }
+    @media (max-width: 420px) {
+      main { padding-top: 65px; }
+      article { padding: 19px 16px; }
     }
   </style>
 </head>
 
 <body>
-  <main class="page">
+  <!-- Top-right close button -->
+  <button
+    class="close-btn"
+    type="button"
+    aria-label="Close Privacy Policy and return"
+    onclick="returnToApp()"
+  >×</button>
 
-    <!-- APP BRANDING -->
-    <header class="brand-header">
-      <div class="ram-brand">|| राम ||</div>
-      <div class="brand-mark" aria-label="TJ">TJ</div>
-      <p class="brand-name">Tomar ji app's</p>
-      <p class="brand-subtitle">To-Do · Task Manager</p>
-    </header>
+  <main>
+    <div class="brand">|| राम ||</div>
 
-    <!-- PRIVACY POLICY -->
-    <article class="policy-card">
-
-      <header>
-        <span class="policy-label">YOUR PRIVACY MATTERS</span>
-
-        <h1>Privacy Policy</h1>
-
-        <p class="policy-subtitle">
-          To-Do Task Manager
-        </p>
-
-        <p class="policy-date">
-          Effective Date: 24 October 2026<br>
-          Last Updated: 24 October 2026
-        </p>
-      </header>
-
-      <div class="intro-box">
-        <p>
-          This Privacy Policy explains how To-Do Task Manager handles
-          information when you use the app. The app helps you organize
-          tasks, set due dates and priorities, monitor your progress,
-          review completed tasks, and use a focus timer.
-        </p>
-      </div>
-
-      <h2>1. Information Stored by the App</h2>
-
-      <p>
-        The current version stores certain information locally in your
-        browser or app storage on your device. This may include:
+    <article>
+      <h1>Privacy Policy</h1>
+      <p class="updated">
+        To-Do Task Manager · Last updated: 24 October 2026
       </p>
 
-      <ul>
-        <li>Task names and due dates you enter.</li>
-        <li>Task priorities and completion status.</li>
-        <li>Completed-task history.</li>
-        <li>Your selected light or dark theme.</li>
-        <li>Your saved Privacy Policy consent preference.</li>
-      </ul>
-
       <p>
-        The app does not require you to create an account to use these
-        features. The tasks and preferences described above are stored
-        locally by the current front-end code.
+        This Privacy Policy explains how the To-Do Task Manager app
+        handles information when you use it.
+      </p>
+
+      <h2>1. Information Stored by the App</h2>
+      <p>
+        The current app stores task names, due dates, priorities,
+        completion status, completed-task history, your selected theme,
+        and your Privacy Policy consent preference in local storage
+        on your device. The app does not require an account.
       </p>
 
       <h2>2. How Your Information Is Used</h2>
-
       <p>
-        Locally stored information is used to display and manage your
-        tasks, calculate your progress, show your completed-task history,
-        remember your theme preference, and remember your Privacy Policy
-        consent.
+        This information is used to manage tasks, display progress,
+        show completed-task history, remember your theme, and remember
+        your consent choice. The current front-end code does not itself
+        send this information to a developer-operated server.
       </p>
 
+      <h2>3. Storage and Deletion</h2>
       <p>
-        The app displays the date and time using your device's clock.
-        Its focus timer counts down while the app's code is running.
-        The motivational messages on the splash screen are built into
-        the app.
+        Locally stored information may remain on your device between
+        sessions. It may be removed when you clear the app data or
+        relevant browser storage, or uninstall the app. There is
+        currently no in-app cloud backup or cross-device sync.
       </p>
 
-      <p>
-        The current front-end code does not itself provide a cloud
-        account or cross-device synchronization. It does not itself
-        send task names or task lists to a developer-operated server.
-      </p>
-
-      <h2>3. Privacy Policy Consent</h2>
-
-      <p>
-        Before entering the task manager, the app asks you to open the
-        Privacy Policy and tick the agreement checkbox. You must then
-        select the acceptance button to continue.
-      </p>
-
-      <p>
-        Your consent preference is saved locally on your device so the
-        app can remember your choice the next time you open it. The
-        current app code stores a consent-version value rather than
-        sending your acceptance to a remote server.
-      </p>
-
-      <p>
-        If the Privacy Policy is materially changed, the app may require
-        you to review and accept the updated version. Clearing app or
-        browser storage may also remove the saved consent preference.
-      </p>
-
-      <h2>4. Storage, Retention and Deletion</h2>
-
-      <p>
-        Your tasks, completed-task history, theme preference and consent
-        preference may remain stored on your device between app sessions.
-        The information is generally retained until you delete it, clear
-        the relevant storage, or remove the app and its associated data.
-      </p>
-
-      <p>
-        You can delete individual tasks using the available app controls.
-        You can also clear completed-task history from within the app.
-        Clearing all app or browser storage may remove additional saved
-        tasks and preferences.
-      </p>
-
-      <p>
-        The app does not currently provide an online account for
-        recovering deleted data. If a task is important, keep your own
-        separate copy.
-      </p>
-
-      <h2>5. Sharing and Third-Party Services</h2>
-
+      <h2>4. Third-Party Services</h2>
       <p>
         The current front-end code does not itself include advertising
-        code, analytics code, cloud synchronization, or an online task
-        submission service.
+        or analytics code. If advertising, analytics, crash reporting,
+        cloud sync, or other third-party services are added, their data
+        practices must be reviewed and this policy updated accordingly.
       </p>
 
+      <h2>5. Sensitive Information</h2>
       <p>
-        If the app is packaged using a third-party app wrapper, the
-        wrapper or distribution platform may have separate technical
-        practices. Any future addition of advertising, analytics,
-        crash reporting, online storage or other third-party services
-        must be reviewed and this policy updated as necessary.
+        Avoid entering passwords, financial details, identification
+        numbers, or other sensitive information into task names.
       </p>
 
+      <h2>6. Children's Privacy</h2>
       <p>
-        Third-party services, if added in a future version, may process
-        information under their own terms and privacy policies.
+        The app is a general-purpose task manager. If its intended
+        audience or data practices change, its privacy protections
+        should be reviewed before release.
       </p>
 
-      <h2>6. Device Permissions and Sensitive Information</h2>
-
+      <h2>7. Changes to This Policy</h2>
       <p>
-        The current task manager features described in this policy do
-        not require you to provide your real name, phone number, precise
-        location, contacts or calendar information.
+        This policy may be updated when app features or data practices
+        change. If a material change requires renewed consent, the app
+        should request acceptance of the updated policy version.
       </p>
 
+      <h2>8. Contact</h2>
       <p>
-        Please avoid entering passwords, payment card details, financial
-        information, private identification numbers, or other sensitive
-        information into task names or notes.
+        For privacy questions, use the developer contact details
+        published with the app. Add a monitored support email before
+        publishing.
       </p>
 
-      <h2>7. Focus Timer and Notifications</h2>
-
-      <p>
-        The focus timer is an in-app countdown. It is not a guaranteed
-        system alarm. Its behavior may be affected if the app is closed,
-        suspended, or restricted by your browser or operating system.
-      </p>
-
-      <p>
-        Do not rely on the timer for emergency alerts or other
-        time-critical notifications.
-      </p>
-
-      <h2>8. Children's Privacy</h2>
-
-      <p>
-        To-Do Task Manager is a general-purpose task organizer. The
-        current front-end code does not require children or other users
-        to submit personal information to a developer-operated server.
-      </p>
-
-      <p>
-        If the app's audience, online services or information practices
-        change, its privacy protections and this section should be
-        reviewed before the updated version is released.
-      </p>
-
-      <h2>9. Data Security</h2>
-
-      <p>
-        Information stored locally may be accessible to someone who has
-        access to your unlocked device or its app data. Protect your
-        device with appropriate security settings.
-      </p>
-
-      <p>
-        No method of electronic storage can be guaranteed to be
-        completely secure. The current app does not provide a separate
-        online backup of your tasks.
-      </p>
-
-      <h2>10. Your Choices</h2>
-
-      <ul>
-        <li>Choose what information you enter into tasks.</li>
-        <li>Add, complete or delete tasks using the app controls.</li>
-        <li>Clear completed-task history from the app.</li>
-        <li>Choose between the available light and dark themes.</li>
-        <li>Decide whether to accept the Privacy Policy and continue.</li>
-        <li>Clear app or browser storage to remove locally stored data.</li>
-      </ul>
-
-      <h2>11. Changes to This Privacy Policy</h2>
-
-      <p>
-        This Privacy Policy may be updated when app features, data
-        practices or applicable requirements change. The latest version
-        should be published at the official Privacy Policy webpage used
-        by the app.
-      </p>
-
-      <p>
-        If a change requires renewed consent, the app should be updated
-        to use a new Privacy Policy version so that users can review it
-        again before continuing.
-      </p>
-
-      <h2 class="contact-title">12. Contact and Support</h2>
-
-      <p>
-        For questions, privacy concerns or suggestions about the app,
-        use the developer contact details provided below.
-      </p>
-
-      <div class="contact-card">
-        <p>
-          <strong>App Name:</strong>
-          To-Do Task Manager
-        </p>
-
-        <p>
-          <strong>Developer / Publisher:</strong>
-          TJ — Tomar ji app's
-        </p>
-
-        <p>
-          <strong>Support Email:</strong>
-          <a href="mailto:YOUR_EMAIL@gmail.com?subject=To-Do%20App%20Support">
-            tomarji1904@gmail.com
-          </a>
-        </p>
-
-        <p>
-          <strong>Privacy Contact:</strong>
-          <a href="mailto:YOUR_EMAIL@gmail.com?subject=Privacy%20Policy%20Query">
-            tomarji1904@gmail.com
-          </a>
-        </p>
-      </div>
-
-      <hr class="section-divider">
-
-      <a class="back-link" href="index.html">
-        <span aria-hidden="true">←</span>
-        Back to To-Do App
-      </a>
-
+      <button
+        class="back"
+        type="button"
+        onclick="returnToApp()"
+      >← Back to To-Do app</button>
     </article>
-
-    <footer class="footer">
-      <p><strong>|| राम || · Tomar ji app's</strong></p>
-      <p>To-Do · Task Manager</p>
-      <p>© 2026 To-Do Task Manager. All rights reserved.</p>
-    </footer>
-
   </main>
+
+  <script>
+    function returnToApp() {
+      // Normally returns to the consent screen.
+      // If opened directly, return to the app entry page.
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.replace("index.html");
+      }
+    }
+  </script>
 </body>
 </html>
