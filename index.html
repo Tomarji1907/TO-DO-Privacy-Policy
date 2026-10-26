@@ -1,10 +1,11 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#eaf4ff">
+  <meta name="description" content="Privacy Policy for To-Do Task Manager, including developer contact and grievance redressal details.">
   <title>Privacy Policy | To-Do Task Manager</title>
 
   <style>
@@ -66,7 +67,27 @@
 
     p, li { color: #41546d; }
 
-    a { color: #175eb4; }
+    a {
+      color: #175eb4;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-details {
+      margin-top: 15px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #f5f9ff;
+    }
+
+    .contact-details p {
+      margin: 8px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-details strong {
+      color: var(--ink);
+    }
 
     .back {
       display: inline-block;
@@ -128,7 +149,7 @@
     <article>
       <h1>Privacy Policy</h1>
       <p class="updated">
-        To-Do Task Manager · Last updated: 24 October 2026
+        To-Do Task Manager · Last updated: 26 October 2026
       </p>
 
       <p>
@@ -188,11 +209,46 @@
         should request acceptance of the updated policy version.
       </p>
 
-      <h2>8. Contact</h2>
+      <h2>8. Developer Contact & Grievance Redressal</h2>
       <p>
-        For privacy questions, use the developer contact details
-        published with the app. Add a monitored support email before
-        publishing.
+        For questions, complaints, or concerns regarding this Privacy
+        Policy, personal information, or the operation of the app,
+        contact the developer using the details below. Grievances may
+        also be submitted to the designated grievance contact.
+      </p>
+
+      <div class="contact-details">
+        <p>
+          <strong>Developer Name:</strong><br>
+          Yash Tomar
+        </p>
+
+        <p>
+          <strong>Developer Email ID:</strong><br>
+          <a href="mailto:tomarji1904@gmail.com">
+            your-email@example.com
+          </a>
+        </p>
+
+        <p>
+          <strong>Grievance Officer Email ID:</strong><br>
+          <a href="mailto:tomarji1904@gmail.com">
+            grievance-email@example.com
+          </a>
+        </p>
+
+        <p>
+          Please use the relevant email address to submit your
+          privacy-related question or grievance. The contact details
+          published here must be accurate and regularly monitored.
+        </p>
+      </div>
+
+      <h2>9. Contact Information Updates</h2>
+      <p>
+        If the developer's contact details or grievance redressal
+        arrangements change, this Privacy Policy should be updated
+        to reflect the current information.
       </p>
 
       <button
@@ -205,8 +261,8 @@
 
   <script>
     function returnToApp() {
-      // Normally returns to the consent screen.
-      // If opened directly, return to the app entry page.
+      // Return to the previous screen when available.
+      // Otherwise, open the app entry page.
       if (window.history.length > 1) {
         window.history.back();
       } else {
@@ -216,3 +272,4 @@
   </script>
 </body>
 </html>
+```
